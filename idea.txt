@@ -1,0 +1,19 @@
+// conditional serialization
+{
+    amount: "number, condition(execute(amount % 5) == 0)",
+    use_existing_phone_number: "boolean",
+    phone_prefix: 'number, conditional(not_null if use_existing_phone_number == true)',
+    phone_number: "optional, number",
+}
+
+// other form
+
+{
+    use_existing_phone_number: "boolean",
+    phone_prefix: 'number',
+    phone_number: "optional, number",
+}
+serializationCondition({
+    amount: "execute(amount % 5) == 0",
+    phone_prefix: "not_null if use_existing_phone_number == true"
+})
