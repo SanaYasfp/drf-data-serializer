@@ -25,23 +25,6 @@ class PostSerializer extends Serializer {
     }})
   }
 }
-
-
-const port = normalizePort(process.env.PORT || "8000");
-app.use(express.json());
-
-app.post('/', function (req, res) {
-  const serializer = new PostSerializer(req.body);
-  serializer.validate();
-  const valid = serializer.is_valid;
-});
-
-app.listen(port);
-
-
-const server = http.createServer(listenerOrApp).listen(port, () => {
-    console.log(`Server running: http://127.0.0.1:${port}.`);
-});
 ```
 
 ```typescript
@@ -61,21 +44,4 @@ class PostSerializer extends Serializer {
     }})
   }
 }
-
-
-const port = normalizePort(process.env.PORT || "8000");
-app.use(express.json());
-
-app.post('/', function (req, res) {
-  const serializer = new PostSerializer(req.body);
-  serializer.validate();
-  const valid = serializer.is_valid;
-});
-
-app.listen(port);
-
-
-const server = http.createServer(listenerOrApp).listen(port, () => {
-    console.log(`Server running: http://127.0.0.1:${port}.`);
-});
 ```
