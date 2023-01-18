@@ -1,6 +1,6 @@
 {
   "name": "drf-data-serializer",
-  "version": "0.8.65",
+  "version": "0.8.7",
   "description": "\"# drf-data-serializer\"",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

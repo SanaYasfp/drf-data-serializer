@@ -179,7 +179,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    EmailField(args?: EmailFieldProperties | undefined, value?: any): boolean | FieldValidator {
+    EmailField(args?: EmailFieldProperties | undefined, value?: any): FieldValidator {
         args = args || {};
         args.kind = "StringField";
 
@@ -199,7 +199,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    FloatField(args?: FloatFieldProperties | undefined, value?: any): boolean | FieldValidator {
+    FloatField(args?: FloatFieldProperties | undefined, value?: any): FieldValidator {
         args = args || {};
         args.kind = "NumericField";
 
@@ -209,7 +209,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    DateTimeField(args?: DateTimeFieldProperties | undefined, value?: any): boolean | FieldValidator {
+    DateTimeField(args?: DateTimeFieldProperties | undefined, value?: any): FieldValidator {
         args = args || {};
         args.kind = "DateField";
 
@@ -219,7 +219,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    DateField(args?: DateFieldProperties | undefined, value?: any): boolean | FieldValidator {
+    DateField(args?: DateFieldProperties | undefined, value?: any): FieldValidator {
         args = args || {};
         args.kind = "DateField";
 
@@ -229,7 +229,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    TimeField(args?: TimeFieldProperties | undefined, value?: any): boolean | FieldValidator {
+    TimeField(args?: TimeFieldProperties | undefined, value?: any): FieldValidator {
         args = args || {};
         args.kind = "DateField";
 
@@ -239,7 +239,7 @@ class Serializer extends AcceptedField {
         }
     }
 
-    RegexField(args: RegexFieldProperties, value?: any): boolean | FieldValidator {
+    RegexField(args: RegexFieldProperties, value?: any): FieldValidator {
         args.kind = "RegexField";
 
         return {
