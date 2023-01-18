@@ -17,3 +17,45 @@ serializationCondition({
     amount: "execute(amount % 5) == 0",
     phone_prefix: "not_null if use_existing_phone_number == true"
 })
+
+
+
+
+Boolean Fields
+    BooleanField
+
+String Fields
+    CharField
+    EmailField
+    RegexField
+    SlugField   x
+    UrlField    x
+
+    max_length: number - 50
+    min_length: number - 0
+    trim_whitespace: boolean - true
+
+Numeric Fields
+    IntegerField
+    FloatField
+    DecimalField    x
+
+    max_value: number - 100
+    min_value: number - 100 * -1
+    decimal_places: number
+
+Date and Time Fields
+    DateTimeField
+    DateField
+    TimeField
+
+    auto_now_add: boolean - true
+
+Default Propeties
+    required: boolean - true
+    allow_blank: boolean - false
+    default: string
+    error_messages: string
+    read_only: boolean - false
+    write_only: boolean - false
+    like: array - ["xof", "usd", "xaf", "cdf", "gnf"]
